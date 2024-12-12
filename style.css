@@ -649,9 +649,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* .change:hover {
-    text-decoration: underline;
-} */
+
 
 .address {
     margin-top: 10px;
@@ -664,26 +662,55 @@ button:hover {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    font-size: 16px;
-    /* border: 1px solid #ccc; */
-    
-    /* background-color: #fff; */
-}
-.menu-section {
-    margin-top: 40px;
-    margin-left: 40px;
+    font-size: 16px; 
 }
 
-/* Category */
+.menu-section {
+    padding: 20px;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+
+
+.menu-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: start;
+    box-sizing: border-box;
+}
+
 .menu-category h3 {
-    font-size: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+.menu-category {
+    display: flex; /* ჰორიზონტალური განლაგებისთვის */
+    flex-wrap: wrap; /* ახალი ხაზის დაშვებისათვის */
+    justify-content: start; /* ცენტრირება */
+    gap: 20px; /* დაშორება ელემენტებს შორის */
+}
+
+.menu-item h4 {
+    margin: 10px 0 5px;
+}
+
+.menu-item .description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.menu-item .price {
     font-weight: bold;
     color: #333;
-    
-  
 }
 
-/* Menu Item */
 
 
 
@@ -692,7 +719,7 @@ button:hover {
     background-color: #f4f4f4;
     padding: 15px;
     margin: 10px 0;
-    border-radius: 0px;
+
     height: 150px;
     width: 400px;
 }
