@@ -1,0 +1,864 @@
+ *{
+    padding: 0;
+    margin: 0;
+}
+body {
+    
+    height: 480vh;
+    overflow-x: hidden;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 70px;
+    background-color: #f5e3d4;
+}
+
+.logo span {
+    font-size: 50px;
+    font-weight: bold;
+    color: #3a3737;
+    font-family: 'serif';
+}
+
+.logo sup {
+    font-size: 22px;
+    vertical-align: super;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.nav-icons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.hero-section {
+    background-image: url(./photo/two.webp); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    text-align: start;
+    color: white;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    top: 200px;
+    left: 70px;
+}
+
+.hero-content h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.buttons .btn {
+    padding: 15px 40px;
+    border: 1px solid white;
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons .btn:hover {
+    background-color:rgb(105, 131, 115);
+    color: white;
+}
+.scroll-container {
+    width: 100%;
+    background-color: #5b6451;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.scroll-container:hover #text1 {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.scroll-container:hover #text2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    
+}
+
+.container.reverse {
+    flex-direction: row-reverse; /* მონაცვლეობით სურათსა და ტექსტს */
+}
+
+.container .text {
+    flex: 1;
+    padding: 20px;
+}
+
+.container .text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.container .text h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.container .text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color:white;
+}
+
+.container .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.container .image {
+    flex: 1;
+    text-align: center;
+}
+
+.container .image img {
+    max-width: 760px;
+    /* border-radius: 8px; */
+}
+
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+p {
+    margin-bottom: 20px;
+}
+.contact-section {
+    background-color: #f9f3ec;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    font-weight: bold;}
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contact-info > div {
+    margin: 0 30px;
+}
+
+.address, .hours {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.address h2, .hours h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+   font-weight: bold;
+    
+}
+
+.divider {
+    width: 1px;
+    background-color: #333;
+    height: 120px;
+}
+.photocollage img {
+    width: 1520px;
+}
+footer {
+    background-color: #404d3a; /* მუქი მწვანე ფონისთვის */
+    color: white;
+    padding: 70px 0;
+    height: 350px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.newsletter, .contact, .social-media {
+    flex: 1;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fut{
+    background-color: #9daa97; /* მუქი მწვანე ფონისთვის */
+    color: white;
+    padding: 20px 0;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .logo span {
+        font-size: 32px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-icons {
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .container .text h1 {
+        font-size: 24px;
+    }
+
+    .contact-section h1 {
+        font-size: 50px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divider {
+        height: 50px;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .photocollage img {
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets, 600px to 992px) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .navbar {
+        padding: 15px 50px;
+    }
+
+    .logo span {
+        font-size: 40px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 60px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-section h1 {
+        font-size: 60px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .hero-content h1 {
+        font-size: 80px;
+    }
+
+    .contact-info {
+        flex-direction: row;
+    }
+
+    .footer .container {
+        flex-direction: row;
+    }
+}
+.us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background-color: #f9eee7;
+}
+.secret{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:150px ;
+    background-color: #404d3a;
+    font-size: 35px;
+    color: #f9f3ec;
+}
+.menu{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background-color: #f9eee7;
+
+}
+
+
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 100px 300px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+/* underline ეფექტი */
+label::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #666;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+label:hover::after {
+    width: 100%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* ჩანართების შინაარსი */
+.tab-content {
+    display: none;
+    text-align: left;
+    max-width: 800px;
+}
+
+/* შინაარსის გამოტანა აქტიურ ჩანართზე */
+input[type="radio"]:checked + label::after {
+    width: 100%;
+}
+
+input[type="radio"]:checked + label + .tab-content {
+    display: block;
+}
+
+/* საკვების ინფორმაცია */
+
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.menu-item h4 {
+    margin: 5px 0;
+}
+
+.menu-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #333;
+}
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        align-items: center;
+    }
+
+    .menu h1 {
+        font-size: 24px;
+    }
+
+    .menu p {
+        font-size: 14px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabs label {
+        width: 100%;
+        text-align: center;
+    }
+}
+.order-online {
+    max-width: 800px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    
+}
+
+/* Title and description */
+h1 {
+    font-size: 72px;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Accepting Orders status */
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.status-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Pickup and Delivery Buttons */
+.order-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+button.active {
+    background-color: #2f4f30;
+    color: white;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* Pickup time and address */
+.pickup-time {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+.change {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* .change:hover {
+    text-decoration: underline;
+} */
+
+.address {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Menu Dropdown */
+.menu-dropdown select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    /* border: 1px solid #ccc; */
+    
+    /* background-color: #fff; */
+}
+.menu-section {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+/* Category */
+.menu-category h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    
+  
+}
+
+/* Menu Item */
+
+
+
+.menu-item {
+
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 0px;
+    height: 150px;
+    width: 400px;
+}
+
+.menu-item h4 {
+    
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* No Items Message */
+.no-items {
+    font-size: 18px;
+    color: #777;
+    
+}
+
+.info-text {
+    font-size: 14px;
+    color: #777;
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-icons {
+        justify-content: center;
+    }
+
+    .order-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu-category {
+        text-align: center;
+    }
+
+    .menu-item {
+        text-align: center;
+    }
+}
+
+/* საშუალო ეკრანებისთვის (პლანშეტი) */
+@media screen and (max-width: 1024px) {
+    .menu-section {
+        padding: 10px;
+    }
+
+    .menu-category {
+        margin-top: 15px;
+    }
+
+    .menu-item {
+        font-size: 0.9rem;
+    }
+}
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+     color: #333; 
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form .btn {
+    padding: 10px;
+    background-color: #4a5a40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form .btn:hover {
+    background-color: #3a4a30;
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-content: flex-start;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-item i {
+    font-size: 2rem;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+  
+  
