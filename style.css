@@ -166,6 +166,7 @@ body {
 .container .text {
     flex: 1;
     padding: 20px;
+    
 }
 
 .container .text h1 {
@@ -212,8 +213,10 @@ p {
     margin-bottom: 20px;
 }
 .contact-section {
+    display: flex;
+    flex-direction: column;
     background-color: #f9f3ec;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -221,11 +224,21 @@ p {
     font-size: 70px;
     margin-bottom: 20px;
     font-weight: bold;}
+
 .contact-info {
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
-    margin-top: 40px;
+    gap: 40px; /* სივრცე ელემენტებს შორის */
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.address, .hours {
+
+    text-align: center; /* ტექსტის მარცხენა გასწორება */
+    
 }
 
 .contact-info > div {
@@ -240,7 +253,7 @@ p {
 .address h2, .hours h2 {
     font-size: 34px;
     margin-bottom: 10px;
-   font-weight: bold;
+    font-weight: bold;
     
 }
 
@@ -248,15 +261,21 @@ p {
     width: 1px;
     background-color: #333;
     height: 120px;
+    margin: 0 20px;
 }
 .photocollage img {
     width: 1520px;
 }
 footer {
+
     background-color: #404d3a; /* მუქი მწვანე ფონისთვის */
     color: white;
     padding: 70px 0;
     height: 350px;
+    
+}
+footer h2, footer p, footer label, footer h4, footer span, footer a {
+    color: white !important; /* ყველა შესაძლო ტექსტი თეთრი footer-ში */
 }
 
 .container {
@@ -801,8 +820,7 @@ button:hover {
 
 .contact-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     padding: 40px 20px;
     gap: 20px;
 }
@@ -844,6 +862,10 @@ form textarea {
     font-size: 1rem;
 }
 
+input[type="email"] {
+    background-color: #fff; /* თეთრი ფონი */
+    border: 1px solid #ccc;
+}
 form .btn {
     padding: 10px;
     background-color: #4a5a40;
@@ -860,14 +882,18 @@ form .btn:hover {
 }
 
 /* Contact Info Section */
-.contact-info {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    align-content: flex-start;
+
+.contact-section{
+    display: flex;
+    flex-direction: row;
 }
 
+.contact-info {
+  display: grid;
+  
+  grid-template-columns: repeat(2, 1fr);
+}
+    
 .info-item {
     text-align: center;
 }
@@ -887,5 +913,43 @@ form .btn:hover {
     color: #555;
 }
 
-  
-  
+.map-container {
+    position: relative;
+    width: 100%; 
+    padding-bottom: 56.25%; 
+    height: 0;
+
+}
+  .map-container iframe {
+    width: 1520px;
+    height: 855px;
+}@media (max-width: 768px) {
+    /* მცირე ეკრანებზე კონტაქტის სექციის მორგება */
+    .contact-info {
+        grid-template-columns: 1fr; /* ერთი სვეტი */
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px; /* მცირე ეკრანებზე ნაკლები სიმაღლე */
+    }
+}
+
+@media (max-width: 480px) {
+    /* დამატებითი სტილი ძალიან პატარა ეკრანებისთვის */
+    .contact-section {
+        padding: 10px;
+    }
+
+    .info-item i {
+        font-size: 1.5rem; /* აიკონის ზომის შემცირება */
+    }
+
+    .info-item h3 {
+        font-size: 1rem; /* სათაურის ზომის შემცირება */
+    }
+
+    .info-item p {
+        font-size: 0.8rem; /* ტექსტის ზომის შემცირება */
+    }
+}
